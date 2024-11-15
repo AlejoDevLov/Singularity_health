@@ -6,7 +6,7 @@ import { PrimaryColors } from '../../../../interfaces/primaryColors.interface';
 import { LoginService } from '../../services/login.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { User } from '../../interfaces/user.interface';
-import { map, Observable, of, Subject, Subscription, tap } from 'rxjs';
+import { catchError, map, Observable, of, Subscription } from 'rxjs';
 import { AppService } from '../../../../services/app.service';
 
 
@@ -35,6 +35,7 @@ export class FormComponent implements OnDestroy {
   public isInputPasswordWritten = signal(false);
 
   public errorsForm = signal('');
+  public isABadRequest = signal(false);
 
   public loginForm: FormGroup = this.fb.group({
     email: ['', [ Validators.required, Validators.email ]],
@@ -88,6 +89,15 @@ export class FormComponent implements OnDestroy {
       this.loginService.isLoginLoading.set(true)
       this.credentialsSubscription = this.checkCredentials( user )
         .pipe(
+          catchError( err => {
+            this.loginService.isLoginLoading.set(false);
+            let error = err.error.error;
+            error = ( error === 'user not found') ? 'Usuario no encontrado' : error;
+            this.errorsForm.set(error.toUpperCase());
+            this.isABadRequest.set(true);
+
+            throw new Error(error);
+          }),
           map( resp =>  <{ token: string }>resp)
         )
         .subscribe( resp => {
@@ -114,10 +124,8 @@ export class FormComponent implements OnDestroy {
   }
 
   checkCredentials( user?: User ): Observable<Object>{
-    // Lo ideal es hacer la validacion con el usuario tomado del formulario
-    // Pero dado que la API no me aceptaba dichos valores, tuve que trabajar con datos propios de la API
     const endpoint = 'https://reqres.in/api/login';
-    const body = JSON.stringify({ email: 'eve.holt@reqres.in', password: 'cityslicka' });
+    const body = JSON.stringify(user);
     return this.http.post(
       endpoint,
       body,

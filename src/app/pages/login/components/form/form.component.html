@@ -39,7 +39,7 @@
 
     </div>
 
-    @if(loginForm.invalid){
+    @if(loginForm.invalid || isABadRequest()){
 
       <p class="container__form__error-message">{{ errorsForm() }}</p>
 
