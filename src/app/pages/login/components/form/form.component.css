@@ -1,0 +1,118 @@
+.container{
+  max-width: 350px;
+  font-size: 14px;
+}
+
+.container__title{
+  padding-left: 20px;
+  border-left: #ed705a 5px solid;
+  font-size: 20px;
+  height: 30px;
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  color: #353639;
+}
+
+.container__title__h1{
+  font-weight: 800;
+}
+
+.container__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 350px;
+}
+
+.container__form__wrapper{
+  position: relative;
+  max-width: 300px;
+}
+
+.container__form__input{
+  padding: 5px 15px 5px 15px;
+  margin-bottom: 10px;
+  border: none;
+  box-shadow: 2px 2px 3px #cecccc;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  width: 100%;
+  height: 35px;
+  outline: none;
+}
+
+.container__form__wrapper::before{
+  display: inline-block;
+  position: absolute;
+  font-size: 12px;
+  top: 10px;
+  left: 15px;
+  z-index: 10;
+  color: #9f9e9e;
+  pointer-events: none;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+}
+
+.container__form__wrapper--animation::before {
+  transform: translateY(-12px) !important;
+  -webkit-transform: translateY(-12px) !important;
+  -moz-transform: translateY(-12px) !important;
+  -ms-transform: translateY(-12px) !important;
+  -o-transform: translateY(-12px) !important;
+  font-size: 9px;
+}
+
+.container__form__wrapper--email::before {
+  content: 'EMAIL';
+}
+
+.container__form__wrapper--password::before {
+  content: 'CONTRASEÑA';
+}
+
+.container__form__error-message{
+  color: red;
+  padding-top: 5px;
+}
+
+.container__form__link{
+  width: 90%;
+  text-align: right;
+  color: #b4b3b3;
+  font-size: 12px;
+  margin: 25px 0px;
+}
+
+.container__form__button{
+  color: white;
+  width: max-content;
+  padding: 17px 25px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  font-weight: 600;
+  margin: 0px auto;
+  cursor: pointer;
+}
+
+.container__form__paragraph{
+  color: #b4b3b3;
+  margin-top: 30px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.container__form__span{
+  color: #275d8c;
+  cursor: pointer;
+}

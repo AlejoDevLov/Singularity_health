@@ -1,0 +1,84 @@
+
+<div class="container">
+
+  <div
+    class="container__title"
+    [ngStyle]="{'border-color': titleBorderColor()}">
+      <h1 class="container__title__h1">BIENVENIDO</h1>
+  </div>
+
+  <form
+    [formGroup]="loginForm"
+    class="container__form"
+    (ngSubmit)="submitForm()">
+
+    <div
+      class="container__form__wrapper container__form__wrapper--email"
+      [ngClass]="{ 'container__form__wrapper--animation': isInputEmailWritten() }"
+      >
+
+      <input
+        class="container__form__input"
+        type="email"
+        formControlName="email"
+        (input)="verifyNoEmptyFields($event, 'email')"
+      >
+
+    </div>
+
+    <div
+      class="container__form__wrapper container__form__wrapper--password"
+      [ngClass]="{ 'container__form__wrapper--animation': isInputPasswordWritten() }">
+
+      <input
+        class="container__form__input"
+        type="password"
+        formControlName="password"
+        (input)="verifyNoEmptyFields($event, 'password')"
+      >
+
+    </div>
+
+    @if(loginForm.invalid){
+
+      <p class="container__form__error-message">{{ errorsForm() }}</p>
+
+    }
+
+    <div
+      class="container__form__link container__form__link--margin">
+
+      <div></div>
+
+      <a
+        routerLink="">
+          ¿Olvidaste tu contraseña?
+      </a>
+
+    </div>
+
+    <button
+      class="container__form__button"
+      [ngStyle]="{
+        'background-color': loginForm.valid ? submitColor() : 'gray',
+        'box-shadow': loginForm.valid ? '0px 5px 8px #5485f7af' : '0px 0px transparent',
+      }"
+      type="submit"
+      [disabled]="loginForm.invalid"
+      >
+        INICIAR SESIÓN
+    </button>
+
+    <p
+      class="container__form__paragraph">
+        AÚN NO TENGO CUENTA
+        <span
+          class="container__form__span"
+          >
+          REGISTRARSE
+        </span>
+    </p>
+
+  </form>
+
+</div>
