@@ -14,7 +14,7 @@
   color: #353639;
 }
 
-.container__title__h1{
+.container__h1{
   font-weight: 800;
 }
 
@@ -25,12 +25,12 @@
   min-width: 350px;
 }
 
-.container__form__wrapper{
+.container__wrapper{
   position: relative;
   max-width: 300px;
 }
 
-.container__form__input{
+.container__input{
   padding: 5px 15px 5px 15px;
   margin-bottom: 10px;
   border: none;
@@ -45,7 +45,7 @@
   outline: none;
 }
 
-.container__form__wrapper::before{
+.container__wrapper::before{
   display: inline-block;
   position: absolute;
   font-size: 12px;
@@ -61,7 +61,7 @@
   -o-transition: all .2s linear;
 }
 
-.container__form__wrapper--animation::before {
+.container__wrapper--animation::before {
   transform: translateY(-12px) !important;
   -webkit-transform: translateY(-12px) !important;
   -moz-transform: translateY(-12px) !important;
@@ -70,20 +70,20 @@
   font-size: 9px;
 }
 
-.container__form__wrapper--email::before {
+.container__wrapper--email::before {
   content: 'EMAIL';
 }
 
-.container__form__wrapper--password::before {
+.container__wrapper--password::before {
   content: 'CONTRASEÑA';
 }
 
-.container__form__error-message{
+.container__error-message{
   color: red;
   padding-top: 5px;
 }
 
-.container__form__link{
+.container__link{
   width: 90%;
   text-align: right;
   color: #b4b3b3;
@@ -91,7 +91,7 @@
   margin: 25px 0px;
 }
 
-.container__form__button{
+.container__button{
   color: white;
   width: max-content;
   padding: 17px 25px;
@@ -105,14 +105,14 @@
   cursor: pointer;
 }
 
-.container__form__paragraph{
+.container__paragraph{
   color: #b4b3b3;
   margin-top: 30px;
   font-size: 12px;
   text-align: center;
 }
 
-.container__form__span{
+.container__span{
   color: #275d8c;
   cursor: pointer;
 }

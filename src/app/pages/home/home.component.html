@@ -3,24 +3,57 @@
 
   <section class="main__first-section">
 
-    <div class="main__first-section__div">
+    <div class="main__container">
       <img
-        class="main__first-section__div__img"
+        class="main__img"
         src="../../../assets/orange-home.svg"
         alt="orange-wave">
     </div>
 
-    <div class="main__first-section__div">
+    <div class="main__container">
       <img
-        class="main__first-section__div__img"
+        class="main__img"
         src="../../../assets/orange2-home.svg"
         alt="orange-wave">
     </div>
 
     <app-navbar></app-navbar>
 
-    <router-outlet/>
+    <div class="main__container--router-outlet">
 
+      @if( currentPath() == '/home' ){
+        <app-home-message></app-home-message>
+      } @else {
+        <router-outlet/>
+      }
+
+      <div class="main__container--dog">
+        <img
+          class="main__img--dog"
+          src="../../../assets/dog.png" alt="dog">
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="main__second-section">
+
+    <div class="main__components-container">
+
+      <app-our-services></app-our-services>
+
+      <app-cards></app-cards>
+
+    </div>
+
+    <img
+      class="main__blue-wave"
+      src="../../../assets/wave-blue.svg" alt="blue-wave">
+
+      <img
+        class="main__blue-wave main__blue-wave--dark"
+        src="../../../assets/wave-blue-2.svg" alt="blue-wave">
 
   </section>
 

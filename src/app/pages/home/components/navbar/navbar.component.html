@@ -1,45 +1,49 @@
-<nav class="navbar">
+<nav >
 
-  <div class="navbar__div navbar__icon">
-    <div class="navbar__div navbar__icon__container">
+  <ul class="navbar">
 
+    <li class="navbar__div navbar__div--icon">
+      <div class="navbar__div navbar__div--icon-container">
+
+        <a
+          routerLink="/home">
+            <img src="../../../../../assets/dogAndCat.png" alt="logo">
+        </a>
+
+      </div>
+    </li>
+
+    <li class="navbar__div">
       <a
-        routerLink="/home">
-          <img src="../../../../../assets/dogAndCat.png" alt="logo">
-      </a>
+        routerLinkActive="navbar__div--selected"
+        routerLink="/home/location"
+        >Location</a>
+    </li>
 
-    </div>
-  </div>
+    <li class="navbar__div">
+      <a
+        routerLinkActive="navbar__div--selected"
+        routerLink="/home/blog">Blog</a>
+    </li>
 
-  <div class="navbar__div navbar__location">
-    <a
-      routerLinkActive="navbar__div--selected"
-      routerLink="/home/location"
-      >Location</a>
-  </div>
+    <li class="navbar__div">
+      <a
+        routerLinkActive="navbar__div--selected"
+        routerLink="/home/services">Services</a>
+    </li>
 
-  <div class="navbar__div navbar__blog">
-    <a
-      routerLinkActive="navbar__div--selected"
-      routerLink="/home/blog">Blog</a>
-  </div>
+    <li class="navbar__div">
+      <a
+        routerLinkActive="navbar__div--selected"
+        routerLink="/home/about">About</a>
+    </li>
 
-  <div class="navbar__div navbar__services">
-    <a
-      routerLinkActive="navbar__div--selected"
-      routerLink="/home/services">Services</a>
-  </div>
+    <li class="navbar__div">
+      <a
+        routerLinkActive="navbar__div--selected"
+        routerLink="/home/franchise">Franchise with Us</a>
+    </li>
 
-  <div class="navbar__div navbar__about">
-    <a
-      routerLinkActive="navbar__div--selected"
-      routerLink="/home/about">About</a>
-  </div>
-
-  <div class="navbar__div navbar__franchise">
-    <a
-      routerLinkActive="navbar__div--selected"
-      routerLink="/home/franchise">Franchise with Us</a>
-  </div>
+  </ul>
 
 </nav>

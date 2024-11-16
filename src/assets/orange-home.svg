@@ -8,6 +8,6 @@
   version="1.1">
   <rect x="0" y="0" width="900" height="600" fill="#ed705a"></rect>
     <path d="M0 488L37.5 492.3C75 496.7 150 505.3 225 473.8C300 442.3 375 370.7 450 327C525 283.3 600 267.7 675 259.5C750 251.3 825 250.7 862.5 250.3L900 250L900 601L862.5 601C825 601 750 601 675 601C600 601 525 601 450 601C375 601 300 601 225 601C150 601 75 601 37.5 601L0 601Z"
-      fill="#FFF" stroke-linecap="round" stroke-linejoin="miter">
+      fill="#f2f5fa" stroke-linecap="round" stroke-linejoin="miter">
     </path>
 </svg>

@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnDestroy, signal } from '@angular/core';
+import { AfterContentChecked, AfterViewInit, ChangeDetectionStrategy, Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
-import { PrimaryColors } from '../../../../interfaces/primaryColors.interface';
 import { LoginService } from '../../services/login.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { User } from '../../interfaces/user.interface';
-import { catchError, map, Observable, of, Subscription } from 'rxjs';
+import { catchError, map, Observable, Subscription } from 'rxjs';
 import { AppService } from '../../../../services/app.service';
 
 
@@ -27,9 +26,6 @@ import { AppService } from '../../../../services/app.service';
 export class FormComponent implements OnDestroy {
 
   private credentialsSubscription?: Subscription;
-
-  public titleBorderColor = signal( PrimaryColors.orange );
-  public submitColor = signal( PrimaryColors.blue );
 
   public isInputEmailWritten = signal(false);
   public isInputPasswordWritten = signal(false);

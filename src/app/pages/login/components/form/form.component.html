@@ -2,9 +2,8 @@
 <div class="container">
 
   <div
-    class="container__title"
-    [ngStyle]="{'border-color': titleBorderColor()}">
-      <h1 class="container__title__h1">BIENVENIDO</h1>
+    class="container__title">
+      <h1 class="container__h1">BIENVENIDO</h1>
   </div>
 
   <form
@@ -13,13 +12,14 @@
     (ngSubmit)="submitForm()">
 
     <div
-      class="container__form__wrapper container__form__wrapper--email"
-      [ngClass]="{ 'container__form__wrapper--animation': isInputEmailWritten() }"
+      class="container__wrapper container__wrapper--email"
+      [ngClass]="{ 'container__wrapper--animation': isInputEmailWritten() }"
       >
 
       <input
-        class="container__form__input"
+        class="container__input"
         type="email"
+        autocomplete="off"
         formControlName="email"
         (input)="verifyNoEmptyFields($event, 'email')"
       >
@@ -27,11 +27,11 @@
     </div>
 
     <div
-      class="container__form__wrapper container__form__wrapper--password"
-      [ngClass]="{ 'container__form__wrapper--animation': isInputPasswordWritten() }">
+      class="container__wrapper container__wrapper--password"
+      [ngClass]="{ 'container__wrapper--animation': isInputPasswordWritten() }">
 
       <input
-        class="container__form__input"
+        class="container__input"
         type="password"
         formControlName="password"
         (input)="verifyNoEmptyFields($event, 'password')"
@@ -41,12 +41,12 @@
 
     @if(loginForm.invalid || isABadRequest()){
 
-      <p class="container__form__error-message">{{ errorsForm() }}</p>
+      <p class="container__error-message">{{ errorsForm() }}</p>
 
     }
 
     <div
-      class="container__form__link container__form__link--margin">
+      class="container__link container__link--margin">
 
       <div></div>
 
@@ -58,9 +58,9 @@
     </div>
 
     <button
-      class="container__form__button"
+      class="container__button"
       [ngStyle]="{
-        'background-color': loginForm.valid ? submitColor() : 'gray',
+        'background-color': loginForm.valid ? 'var(--blue-button)' : 'gray',
         'box-shadow': loginForm.valid ? '0px 5px 8px #5485f7af' : '0px 0px transparent',
       }"
       type="submit"
@@ -70,10 +70,10 @@
     </button>
 
     <p
-      class="container__form__paragraph">
+      class="container__paragraph">
         AÚN NO TENGO CUENTA
         <span
-          class="container__form__span"
+          class="container__span"
           >
           REGISTRARSE
         </span>
