@@ -37,24 +37,86 @@
 
   </section>
 
+
   <section class="main__second-section">
 
     <div class="main__components-container">
 
-      <app-our-services></app-our-services>
+      <app-zip-code
+        title="Our Services"
+        text="National Brand With a Local Feel. Experience the Fetch! Difference"
+        subtitle="Enter Your Location and Fetch Our Services">
+      </app-zip-code>
 
-      <app-cards></app-cards>
+      <div class="main__card-wrapper">
+        @for( cardData of secondSectionCardsData; track $index ){
+
+          <app-cards
+            [imageUrl]="cardData.imageUrl"
+            [text]="cardData.text"
+            [alt]="cardData.alt">
+          </app-cards>
+
+        }
+      </div>
 
     </div>
 
     <img
       class="main__blue-wave"
-      src="../../../assets/wave-blue.svg" alt="blue-wave">
+      src="../../../assets/wave-blue.svg" alt="blue wave"
+    >
 
       <img
         class="main__blue-wave main__blue-wave--dark"
-        src="../../../assets/wave-blue-2.svg" alt="blue-wave">
+        src="../../../assets/wave-blue-2.svg" alt="blue wave"
+      >
 
   </section>
+
+
+  <section class="main__third-section">
+
+    <img
+      class="main__blue-wave-3"
+      src="../../../assets/blue-wave-3.svg" alt="blue wave"
+    >
+
+    <div class="main__slider-wrapper">
+
+      <app-slider></app-slider>
+
+    </div>
+
+    <div class="main__wrapper-reserve-cards">
+
+      <div class="main__third-section-cards">
+        <app-third-section-cards></app-third-section-cards>
+      </div>
+
+      <div class="main__third-section-zip">
+
+        <app-zip-code
+          title="How it Works"
+          text="Because finding a good pet sitter shouldn´t be a hassle. With Fetch! It´s as easy as..."
+          subtitle="Enter Your Location and Fetch Our Services">
+        </app-zip-code>
+
+      </div>
+
+    </div>
+
+    <app-join-now></app-join-now>
+
+    <div class="main__yellow-circle main__yellow-circle--big"></div>
+    <div class="main__yellow-circle main__yellow-circle--small"></div>
+
+  </section>
+
+  <footer>
+
+    <app-footer></app-footer>
+
+  </footer>
 
 </main>

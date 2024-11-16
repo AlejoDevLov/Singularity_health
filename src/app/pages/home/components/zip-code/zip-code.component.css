@@ -5,12 +5,15 @@
 }
 
 .section__title {
-  font-size: 26px;
+  font-size: 34px;
   color: var( --orange-wave );
 }
 
 .section__text {
   color: var(--gray-lite-text);
+  max-width: 30ch;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .section__text--orange {
@@ -31,13 +34,19 @@
   -ms-border-radius: 45px;
   -o-border-radius: 45px;
   padding: .3em .3em;
+  box-shadow: 0px 0px 2px var(--gray-lite-text), 1px 2px 7px var(--gray-lite-text);
 }
 
 .section__input {
   width: 70%;
   height: 100%;
   outline: none;
-  padding-left: .5em;
+  padding-left: 1em;
+  font-size: 18px;
+}
+
+.section__input::placeholder{
+  color: var(--gray-lite-text);
 }
 
 .section__button {

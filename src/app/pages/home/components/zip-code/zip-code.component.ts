@@ -2,24 +2,23 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-cards',
+  selector: 'app-zip-code',
   standalone: true,
   imports: [
     CommonModule,
   ],
-  templateUrl: './cards.component.html',
-  styleUrl: './cards.component.css',
+  templateUrl: './zip-code.component.html',
+  styleUrl: './zip-code.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CardsComponent {
+export class ZipCodeComponent {
 
   @Input()
-  public imageUrl!: string;
+  public title!: string;
 
   @Input()
   public text!: string;
 
   @Input()
-  public alt!: string;
-
+  public subtitle!: string;
 }

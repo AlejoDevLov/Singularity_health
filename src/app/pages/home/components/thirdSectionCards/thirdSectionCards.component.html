@@ -1,0 +1,23 @@
+<div class="cards__container">
+
+  @for (cardData of thirdSectionCardsData; track $index) {
+
+    <div
+      class="card__container"
+      [ngClass]="{
+        'card__container--calendar': $index === 0 ,
+        'card__container--pet': $index === 1 ,
+        'card__container--relax': $index === 2
+      }">
+
+      <app-cards
+        [imageUrl]="cardData.imageUrl"
+        [text]="cardData.text"
+        [alt]="cardData.alt">
+      </app-cards>
+
+    </div>
+
+  }
+
+</div>

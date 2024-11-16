@@ -1,7 +1,12 @@
 import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { NavbarComponent, CardsComponent, HomeMessageComponent, OurServicesComponent } from './components/index';
+import { NavbarComponent, CardsComponent, HomeMessageComponent, ZipCodeComponent } from './components/index';
 import { filter, Subscription } from 'rxjs';
+import { SliderComponent } from "./components/slider/slider.component";
+import { ThirdSectionCardsComponent } from "./components/thirdSectionCards/thirdSectionCards.component";
+import { CardData } from './interfaces';
+import { JoinNowComponent } from "./components/join-now/join-now.component";
+import { FooterComponent } from "./components/footer/footer.component";
 
 
 
@@ -13,15 +18,26 @@ import { filter, Subscription } from 'rxjs';
     NavbarComponent,
     HomeMessageComponent,
     CardsComponent,
-    OurServicesComponent
+    ZipCodeComponent,
+    SliderComponent,
+    ThirdSectionCardsComponent,
+    JoinNowComponent,
+    FooterComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  public currentPath = signal('');
   private pathSubscription?: Subscription;
+
+  public currentPath = signal('');
+  public secondSectionCardsData: CardData[] = [
+    { imageUrl: '../../../../../assets/perro.png', text: 'Dog Walking', alt: 'dog-icon' },
+    { imageUrl: '../../../../../assets/gato.png', text: 'Pet Sitting', alt: 'cat-icon' },
+    { imageUrl: '../../../../../assets/casa-de-perro.png', text: 'Overnight Care', alt: 'dog-house-icon' },
+    { imageUrl: '../../../../../assets/huella.png', text: 'Other Services', alt: 'footprint-icon' },
+  ];
 
 
   constructor( private router: Router ){}
