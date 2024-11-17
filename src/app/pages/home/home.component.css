@@ -45,6 +45,11 @@
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
+  transform: translate(0px, 50px);
+  -webkit-transform: translate(0px, 50px);
+  -moz-transform: translate(0px, 50px);
+  -ms-transform: translate(0px, 50px);
+  -o-transform: translate(0px, 50px);
 }
 
 .main__img--dog{
@@ -111,13 +116,13 @@
 
 .main__slider-wrapper{
   width: 100%;
-  max-height: 900px;
+  /* max-height: 900px; */
   /* background-color: blueviolet; */
 }
 
 .main__wrapper-reserve-cards {
   display: flex;
-  padding: 12em 8em;
+  padding: 8em 8em 12em;
   align-items: center;
   justify-content: space-between;
 }
@@ -155,12 +160,12 @@
 .main__yellow-circle--big{
   width: 880px;
   right: 0;
-  top: 37%;
-  transform: translateX(50%);
-  -webkit-transform: translateX(50%);
-  -moz-transform: translateX(50%);
-  -ms-transform: translateX(50%);
-  -o-transform: translateX(50%);
+  top: 39%;
+  transform: translateX(55%);
+  -webkit-transform: translateX(55%);
+  -moz-transform: translateX(55%);
+  -ms-transform: translateX(55%);
+  -o-transform: translateX(55%);
 }
 
 .main__yellow-circle--small{
