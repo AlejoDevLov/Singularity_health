@@ -7,6 +7,7 @@ import { ThirdSectionCardsComponent } from "./components/thirdSectionCards/third
 import { CardData } from './interfaces';
 import { JoinNowComponent } from "./components/join-now/join-now.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { CarouselComponent } from "./components/carousel/carousel.component";
 
 
 
@@ -22,7 +23,8 @@ import { FooterComponent } from "./components/footer/footer.component";
     SliderComponent,
     ThirdSectionCardsComponent,
     JoinNowComponent,
-    FooterComponent
+    FooterComponent,
+    CarouselComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

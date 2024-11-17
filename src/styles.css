@@ -17,6 +17,10 @@
   box-sizing: border-box;
 }
 
+.swiper, .swiper-slide{
+  all: unset;
+}
+
 
 /* Remove default styles on common HTML elements */
 html,

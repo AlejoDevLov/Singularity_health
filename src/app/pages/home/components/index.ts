@@ -7,3 +7,4 @@ export * from './slider/slider.component';
 export * from './thirdSectionCards/thirdSectionCards.component';
 export * from './join-now/join-now.component';
 export * from './footer/footer.component';
+export * from './carousel/carousel.component';
