@@ -1,3 +1,31 @@
-:host {
-  display: block;
+
+.container{
+  transform: translateY(-10%);
+  -webkit-transform: translateY(-10%);
+  -moz-transform: translateY(-10%);
+  -ms-transform: translateY(-10%);
+  -o-transform: translateY(-10%);
+}
+
+.container__title{
+  color: white;
+  font-size: 36px;
+  margin-bottom: 1em;
+}
+
+.container__list{
+  color: orangered;
+  font-size: 20px;
+  padding: 1em;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 200px;
+}
+
+.container__item{
+  margin: 1em 0;
 }

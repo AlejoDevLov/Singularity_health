@@ -1,13 +1,10 @@
 import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { NavbarComponent, CardsComponent, HomeMessageComponent, ZipCodeComponent } from './components/index';
+import { NavbarComponent, CardsComponent, HomeMessageComponent,
+        ZipCodeComponent,JoinNowComponent, FooterComponent, CarouselComponent,
+        ThirdSectionCardsComponent } from './components/index';
 import { filter, Subscription } from 'rxjs';
-import { SliderComponent } from "./components/slider/slider.component";
-import { ThirdSectionCardsComponent } from "./components/thirdSectionCards/thirdSectionCards.component";
 import { CardData } from './interfaces';
-import { JoinNowComponent } from "./components/join-now/join-now.component";
-import { FooterComponent } from "./components/footer/footer.component";
-import { CarouselComponent } from "./components/carousel/carousel.component";
 
 
 
@@ -20,7 +17,6 @@ import { CarouselComponent } from "./components/carousel/carousel.component";
     HomeMessageComponent,
     CardsComponent,
     ZipCodeComponent,
-    SliderComponent,
     ThirdSectionCardsComponent,
     JoinNowComponent,
     FooterComponent,

@@ -1,26 +1,83 @@
-<swiper
-  [modules]="swiperModules"
-  [effect]="'coverflow'"
-  [grabCursor]="true"
-  [centeredSlides]="true"
-  [slidesPerView]="'2'"
-  [coverflowEffect]="{
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true
-  }"
-  [pagination]="true"
-  class="mySwiper"
->
-  <div swiperSlide>
-    @for( slide of slides; track $index){
 
-      <div class="slide-content">
-        {{ slide }}
-      </div>
-    }
-  </div>
+<section class="section">
 
-</swiper>
+  <h2 class="section__title">Here's what pet owners have to <br>say about fetch! Pet Care...</h2>
+
+  <div class="section__container">
+
+  <swiper-container
+    #swiper
+    loop="true"
+    navigation="true"
+    effect="coverflow"
+    centered-slides="true"
+    slides-per-view="auto"
+    coverflow-effect-rotate="0"
+    coverflow-effect-stretch="40"
+    coverflow-effect-depth="100"
+    coverflow-effect-modifier="3"
+    coverflow-effect-slide-shadows="false"
+    initial-slide="1"
+    autoHeight="true"
+    >
+
+      <swiper-slide>
+        <div class="section__slider section__slider--orange">
+
+          <img
+            class="section__img"
+            src="../../../../../assets/woman.png" alt="profile picture">
+
+          <h3 class="section__subtitle">Kenned Dsouza</h3>
+
+          <p class="section__text">
+            "I like that I got to meet the dog walker who is walking my dog
+            daily and consult with her. I also appreciate the daily communication
+            I get about the dog and how my dog is doing"
+          </p>
+
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="section__slider section__slider--blue">
+
+          <img
+            class="section__img"
+            src="../../../../../assets/woman.png" alt="profile picture">
+
+          <h3 class="section__subtitle">Kenned Dsouza</h3>
+
+          <p class="section__text">
+            "I like that I got to meet the dog walker who is walking my dog
+            daily and consult with her. I also appreciate the daily communication
+            I get about the dog and how my dog is doing"
+          </p>
+
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="section__slider section__slider--orange">
+
+          <img
+            class="section__img"
+            src="../../../../../assets/woman.png" alt="profile picture">
+
+          <h3 class="section__subtitle">Kenned Dsouza</h3>
+
+          <p class="section__text">
+            "I like that I got to meet the dog walker who is walking my dog
+            daily and consult with her. I also appreciate the daily communication
+            I get about the dog and how my dog is doing"
+          </p>
+
+        </div>
+      </swiper-slide>
+
+  </swiper-container>
+
+
+</div>
+
+</section>

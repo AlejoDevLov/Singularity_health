@@ -14,3 +14,8 @@
   
   * Email: eve.holt@reqres.in
   * Contraseña: cityslicka
+
+
+## Nota
+Esta pagina no cuenta aun con diseño responsive, por lo que se recomienda verla en pantalla grande 
+entre 900px y 1200px.

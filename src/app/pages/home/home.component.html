@@ -24,7 +24,9 @@
       @if( currentPath() == '/home' ){
         <app-home-message></app-home-message>
       } @else {
-        <router-outlet/>
+        <div>
+          <router-outlet/>
+        </div>
       }
 
       <div class="main__container--dog">
@@ -84,7 +86,6 @@
 
     <div class="main__slider-wrapper">
 
-      <!-- <app-slider></app-slider> -->
       <app-carousel></app-carousel>
 
     </div>
