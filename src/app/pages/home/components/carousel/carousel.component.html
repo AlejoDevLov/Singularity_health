@@ -18,7 +18,6 @@
     coverflow-effect-modifier="3"
     coverflow-effect-slide-shadows="false"
     initial-slide="1"
-    autoHeight="true"
     >
 
       <swiper-slide>
@@ -75,8 +74,42 @@
         </div>
       </swiper-slide>
 
+      <!-- <swiper-slide>
+        <div class="section__slider section__slider--blue">
+
+          <img
+            class="section__img"
+            src="../../../../../assets/woman.png" alt="profile picture">
+
+          <h3 class="section__subtitle">Kenned Dsouza</h3>
+
+          <p class="section__text">
+            "I like that I got to meet the dog walker who is walking my dog
+            daily and consult with her. I also appreciate the daily communication
+            I get about the dog and how my dog is doing"
+          </p>
+
+        </div>
+      </swiper-slide> -->
+
   </swiper-container>
 
+
+  <button
+    (click)="onNext()"
+    class="section__button section__button--right">
+      <img
+        class="section__img--button"
+        src="../../../../../assets/right-arrow.png" alt="arrow">
+  </button>
+
+  <button
+    (click)="onPrev()"
+    class="section__button section__button--left">
+      <img
+        class="section__img--button"
+        src="../../../../../assets/right-arrow.png" alt="arrow">
+  </button>
 
 </div>
 
